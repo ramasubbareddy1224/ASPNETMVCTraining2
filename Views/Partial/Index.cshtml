@@ -1,0 +1,39 @@
+﻿@using MVCTutorials9AM.Models
+@model List<StudentVM>
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Get HTML View</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Tutorials">
+    <meta name="keywords" content="HTML,CSS">
+    <meta name="author" content="Rama">
+
+</head>
+<body>
+    <h2>This is partial page implementation</h2>
+    <h3>Partial View 1</h3>
+    @Html.Partial("DisplayTable", Model) <br />
+
+    <h3>Partial View using Render Partail</h3>
+    @{ Html.RenderPartial("DisplayTable", Model); }
+
+    <h3>Partail View 2</h3>
+    @Html.Partial("DisplayEmployee")
+
+    <h4>call another method</h4>
+    @Html.Action("Partial2", "Partial") <br />
+
+    <h3>Partial View using Render Action</h3>
+    @{Html.RenderAction("Partial2", "Partial"); }
+
+
+
+</body>
+</html>

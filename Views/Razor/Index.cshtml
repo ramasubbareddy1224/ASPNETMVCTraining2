@@ -1,0 +1,198 @@
+﻿@using MVCTutorials9AM.Extensions;
+@{
+    Layout = null;
+    List<SelectListItem> items = new List<SelectListItem>();
+    items.Add(new SelectListItem { Text = "Red", Value = "Red" });
+    items.Add(new SelectListItem { Text = "Yellow", Value = "Yellow", Selected = true });
+    items.Add(new SelectListItem { Text = "Aqua", Value = "Aqua" });
+}
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Get HTML View</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Tutorials">
+    <meta name="keywords" content="HTML,CSS">
+    <meta name="author" content="Rama">
+
+    <style>
+        .bgcolor {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h2>Razor Syntax</h2>
+
+    @{ int value = 10; }
+    @{ string message = "Hello World"; }
+
+    <p>@value</p>
+
+    <p style="color:red">@message</p>
+    <p>@ViewBag.Name</p>
+
+    @{
+
+        string msg1 = "test message";
+        string msg2 = "test message2";
+        string msg3 = string.Format("message 1:{0} , message 2:{1}", msg1, msg2);
+        bool IsAllow = true;
+    }
+    <p>@msg2</p>
+
+    @if (IsAllow)
+    {
+        <p>This is true condition</p>
+    }
+    else if (true)
+    {
+        <p>This is false condition</p>
+    }
+    else
+    {
+
+    }
+
+    @if (true)
+    {
+        @: abc
+        <text>abc</text>
+        <p>This is single if @msg1 @DateTime.Now</p>
+    }
+
+    @{
+
+        /* this is comment block in server code */
+
+        @*Thi is second style comment*@
+    string result = "";
+    if (IsAllow)
+    {
+        result = "This is true condition";
+    }
+    else
+    {
+        result = "This is false condition";
+    }
+    }
+
+    <p>@result</p>
+
+    <p>multiple 10 with 2: @(value * 2)</p>
+    <p>multiple 10 with 3: @value*3</p>
+
+    <p>Today Date: @DateTime.Now and looks sunny</p>
+
+    @for (int i = 0; i < 5; i++)
+    {
+        <p>pragim Tech with index @(i + 1)</p>
+    }
+
+    @{
+        string[] names = { "student1", "student2", "student3" };
+    }
+
+    @foreach (var item in names)
+    {
+        <p>@item</p>
+    }
+
+    <ul>
+        <li>ele1</li>
+        <li>ele2</li>
+    </ul>
+
+    @*The below code is foreach loop *@
+
+    @*
+
+        This is
+            multiline comments
+    *@
+
+    <ul>
+        @foreach (var item in names)
+        {
+
+            <li>@item</li>
+
+        }
+    </ul>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Student1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Student2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Student3</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        @for (int i = 0; i < names.Length; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@names[i]</td>
+            </tr>
+        }
+    </table>
+
+    <input type="text" name="txtempcount" value="10" class="bgcolor" /> <br />
+    @Html.TextBox("txtempcount", "10", new { style = "background-color:red" }) <br />
+    @Html.TextArea("txtdescription", new { rows = "10", cols = "50", @class = "bgcolor" }) <br />
+    @Html.Hidden("hdnname", "ABCXDD") <br />
+
+    @Html.RadioButton("rbstatus", "Yes") Yes
+    @Html.RadioButton("rbstatus", "No") No
+    <br />
+    @Html.CheckBox("chkfood") Veg
+    @Html.CheckBox("chkfood") Non-Veg
+    <br />
+    @Html.DropDownList("ddlcolor", items, "select color") <br />
+
+    <a href="@Url.Action("showmessage","test")">Goto Page</a>
+
+    <br />
+    @Html.ActionLink("Goto Page", "showmessage", "test", new { id = 100 }, null) <br />
+
+    <label><strong> bold message 1</strong></label>
+    <label><strong> bold message 2</strong></label>
+
+
+    @LabelWithBold("My name is Rama") <br />
+    @LabelWithBold("Pragim Technoligies") <br />
+
+    @CustomHelper.LabelWithBold1("Hyderabad")
+
+
+
+    @helper LabelWithBold(string content)
+    {
+    <label><strong>@content</strong></label>
+}
+
+</body>
+</html>

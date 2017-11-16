@@ -1,0 +1,20 @@
+﻿@model List<MVCTutorials9AM.Models.StudentVM>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+        </tr>
+    }
+
+</table>
+
+

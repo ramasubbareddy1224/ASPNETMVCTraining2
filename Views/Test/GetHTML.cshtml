@@ -1,0 +1,22 @@
+﻿
+@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+
+<h2>@ViewBag.Title </h2>
+
+<h1>This is GetHTML Method</h1>
+<h2>This is GetHTML Method</h2>
+<p>Using ViewData</p>
+<h3>@ViewData["Name"]</h3>
+<h3>@(Convert.ToDateTime(ViewData["Date"]).DayOfWeek)</h3>
+
+<p>Using ViewBag</p>
+<h3>@ViewBag.Name</h3>
+<h3>@ViewBag.Date.DayOfWeek</h3>
+
+<p>using TempData</p>
+<h3>@TempData["TData"]</h3>
+<h3>@ViewBag.TDataSample</h3>
+

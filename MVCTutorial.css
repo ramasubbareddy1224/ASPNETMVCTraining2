@@ -1,0 +1,49 @@
+﻿body
+{
+    /*background-color:lightgray;*/
+    font-family: 'Courier New';
+    /*background-image: url("/Content/flower.jpg");*/
+}
+h2, h3 {
+    color: blue;
+}
+
+p {
+    background-color: aqua;
+    font-family: Arial;
+    font-size:400;
+    border:5px dashed red;
+    padding-left:100px;
+    padding-bottom:30px;
+    padding-top:30px;
+
+     margin-top:50px;
+      /*margin-bottom:200px;*/
+
+    /*padding:30px 100px 30px 100px;*/
+
+}
+
+.myparagraph
+{
+    background-color: red;
+    font-family: Arial;
+    font-size:400;
+    border:5px dashed red; 
+    text-align:center;
+
+}
+.myborder{
+    border:2px solid;
+     background-color: yellow;
+}
+
+#mydiv
+{
+ background-color: blue;
+}
+
+
+span{
+    margin-top:100px;
+}
