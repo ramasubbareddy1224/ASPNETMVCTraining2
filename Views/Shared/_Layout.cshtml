@@ -7,7 +7,9 @@
     <meta name="description" content="HTML Tutorials">
     <meta name="keywords" content="HTML,CSS">
     <meta name="author" content="Rama">
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />*@
+    @Styles.Render("~/Content/css")
 </head>
 <body>
 
@@ -21,7 +23,16 @@
 
     <div class="bgcolor-aqua">Footer Area</div>
 
- 
+    @*<script src="~/Scripts/jquery-1.10.2.js"></script> 
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/respond.js"></script>*@
+
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js"></script>*@
+
+    @Scripts.Render("~/Scripts/script")
 
 </body>
 </html>

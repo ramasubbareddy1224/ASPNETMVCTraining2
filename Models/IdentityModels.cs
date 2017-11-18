@@ -29,5 +29,7 @@ namespace MVCTutorials9AM.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<MVCTutorials9AM.Models.StudentVM> StudentVMs { get; set; }
     }
 }

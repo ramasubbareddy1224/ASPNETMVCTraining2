@@ -162,15 +162,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomBundleConfig.cs" />
     <Compile Include="App_Start\CustomRouteConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentTestController.cs" />
     <Compile Include="Controllers\Test1Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Extensions\CustomHelper.cs" />
@@ -185,6 +184,7 @@
     <Compile Include="Models\StudentDeptVM.cs" />
     <Compile Include="Models\StudentVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\StudentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -258,6 +258,15 @@
     <Content Include="Views\Partial\MultiModel.cshtml" />
     <Content Include="Views\Shared\Partial2.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\CreateNew.cshtml" />
+    <Content Include="Views\StudentTest\Create.cshtml" />
+    <Content Include="Views\StudentTest\Delete.cshtml" />
+    <Content Include="Views\StudentTest\Details.cshtml" />
+    <Content Include="Views\StudentTest\Edit.cshtml" />
+    <Content Include="Views\StudentTest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Test1\" />

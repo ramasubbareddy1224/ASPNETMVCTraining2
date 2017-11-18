@@ -14,6 +14,7 @@ namespace MVCTutorials9AM
         {
             CustomRouteConfig.LoadRoutes(RouteTable.Routes);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            CustomBundleConfig.RegisterBundle(BundleTable.Bundles);
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
