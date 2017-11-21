@@ -1,7 +1,7 @@
 ﻿@using MVCTutorials9AM.Models
 @model List<StudentVM>
 @{
-    Layout = null;
+//Layout = null;
 
 }
 
@@ -33,7 +33,14 @@
     <h3>Partial View using Render Action</h3>
     @{Html.RenderAction("Partial2", "Partial"); }
 
+    <h3>Get Data Using Jquery</h3>
+    <div id="divpartial"></div>
 
+    @section InitScript{
+        <script>
+            getpartialData();
+        </script>
+    }
 
 </body>
 </html>

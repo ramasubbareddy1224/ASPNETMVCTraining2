@@ -15,7 +15,7 @@ namespace MVCTutorials9AM.Controllers
             List<StudentVM> studentListobj = new List<StudentVM>();
             studentListobj.Add(new StudentVM { ID = 101, Name = "student1" });
             studentListobj.Add(new StudentVM { ID = 102, Name = "student2" });
-           
+
             //ViewBag.Students = studentList;
             return View(studentListobj);
         }
@@ -37,10 +37,25 @@ namespace MVCTutorials9AM.Controllers
             return View(stdDepatObj);
         }
 
-        [ChildActionOnly]
+        
         public PartialViewResult Partial2()
         {
             return PartialView();
+        }
+
+        public ActionResult contentData()
+        {
+            return Content("This is sample content");
+        }
+        public ActionResult JsonData()
+        {
+            var data = new StudentVM { ID = 100, Name = "Rama", Email = "rama@gmail.com" };
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult File()
+        {
+            string filename = "~/Content/flower.jpg";
+            return File(filename, MimeMapping.GetMimeMapping(filename));
         }
     }
 }

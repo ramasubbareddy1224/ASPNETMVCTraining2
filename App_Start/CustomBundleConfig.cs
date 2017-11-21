@@ -19,7 +19,9 @@ namespace MVCTutorials9AM
             scripts.Include("~/Scripts/jquery-{version}.js",
                             "~/Scripts/jquery.validate*",
                             "~/Scripts/modernizr-*",
-                            "~/Scripts/bootstrap.js"
+                            "~/Scripts/bootstrap.js",
+                            "~/Scripts/sitescript.js",
+                            "~/Scripts/ajaxrequest.js"
                 );
 
             bundles.Add(scripts);
