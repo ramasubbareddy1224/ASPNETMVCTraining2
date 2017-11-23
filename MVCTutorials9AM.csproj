@@ -165,7 +165,10 @@
     <Compile Include="App_Start\CustomBundleConfig.cs" />
     <Compile Include="App_Start\CustomRouteConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActionResultController.cs" />
+    <Compile Include="Controllers\CarHomeController.cs" />
+    <Compile Include="Controllers\CarMakerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
@@ -182,9 +185,12 @@
     <Compile Include="Models\CarMaker.cs" />
     <Compile Include="Models\CarModel.cs" />
     <Compile Include="Models\CMSDBContext.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAddress.cs" />
     <Compile Include="Models\DepartmentVM.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OrderHistory.cs" />
     <Compile Include="Models\StudentDeptVM.cs" />
     <Compile Include="Models\StudentVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -275,6 +281,12 @@
     <Content Include="Views\StudentTest\Index.cshtml" />
     <Content Include="Views\ActionResult\Index.cshtml" />
     <Content Include="Views\ActionResult\GetTableData.cshtml" />
+    <Content Include="Views\CarMaker\Index.cshtml" />
+    <Content Include="Views\CarMaker\Detail.cshtml" />
+    <Content Include="Views\CarMaker\Create.cshtml" />
+    <Content Include="Views\CarMaker\Edit.cshtml" />
+    <Content Include="Views\Shared\_BLayout.cshtml" />
+    <Content Include="Views\CarHome\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Test1\" />

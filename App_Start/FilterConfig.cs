@@ -9,6 +9,7 @@ namespace MVCTutorials9AM
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             //filters.Add(new LogActionFilter());
+            filters.Add(new AuthorizeAttribute());
             filters.Add(new HandleErrorAttribute());
 
         }

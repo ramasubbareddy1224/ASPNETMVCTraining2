@@ -1,0 +1,27 @@
+﻿@model List<MVCTutorials9AM.Models.CarMaker>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Car Maker List</h2>
+
+<h3>@Html.ActionLink("Create","Create")</h3>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@Html.ActionLink("Details","Detail",new {id=item.ID })</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = item.ID })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = item.ID })</td>
+        </tr>
+    }
+</table>
+

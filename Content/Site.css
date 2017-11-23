@@ -34,3 +34,23 @@ textarea {
     height: 60px;
     text-align: center;
 }
+
+.navbar-default {
+    background-color: #0269C2;
+}
+
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #fff;
+        }
+
+    .navbar-default .navbar-brand {
+        color: #fff;
+    }
+
+.navbar {
+    margin-bottom: 0px;
+}
